@@ -12,7 +12,7 @@ namespace meioTp1_ProgDin
 {
     public partial class frmSolver : Form
     {
-        private List<uscConcorrente> concorrentes;
+        private List<uscConcorrente> concorrentes = new List<uscConcorrente>();
 
         public frmSolver()
         {
@@ -48,7 +48,8 @@ namespace meioTp1_ProgDin
         private void btnCalcular_Click(object sender, EventArgs e)
         {
             List<decimal[,]> projecoes = new List<decimal[,]>();
-            List<decimal[,]> rendimentos = new List<decimal[,]>(); 
+            List<decimal[,]> rendimentos = new List<decimal[,]>();
+            List<IterationResults> res;
             try
             {
                 foreach(uscConcorrente usc in concorrentes){
@@ -56,7 +57,9 @@ namespace meioTp1_ProgDin
                     rendimentos.Add(usc.getWeightMatrix());
                 }
 
-                modProgDin.Calculate(projecoes, rendimentos, (int) nudDimensao.Value, (int)nudNumIteracoes.Value);
+                res = modProgDin.Calculate(projecoes, rendimentos, (int)nudDimensao.Value, (int)nudNumIteracoes.Value, Operation.Min);
+                frmResultados frm = new frmResultados(res);
+                frm.ShowDialog();
             }
             catch (Exception ex)
             {
