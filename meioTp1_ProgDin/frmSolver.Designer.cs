@@ -37,16 +37,16 @@
             this.tbcConcorrentes = new System.Windows.Forms.TabControl();
             this.btnCalcular = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.nudNumIteracoes = new System.Windows.Forms.NumericUpDown();
-            this.rbtNumIteracoes = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.rbtNumIteracoes = new System.Windows.Forms.RadioButton();
+            this.nudNumIteracoes = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.nudDimensao)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudConcorrentes)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudNumIteracoes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudNumIteracoes)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -149,6 +149,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox2.Controls.Add(this.numericUpDown2);
             this.groupBox2.Controls.Add(this.radioButton2);
             this.groupBox2.Controls.Add(this.rbtNumIteracoes);
@@ -159,46 +160,6 @@
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Critérios de paragem:";
-            // 
-            // nudNumIteracoes
-            // 
-            this.nudNumIteracoes.Location = new System.Drawing.Point(152, 18);
-            this.nudNumIteracoes.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nudNumIteracoes.Name = "nudNumIteracoes";
-            this.nudNumIteracoes.Size = new System.Drawing.Size(98, 20);
-            this.nudNumIteracoes.TabIndex = 7;
-            this.nudNumIteracoes.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // rbtNumIteracoes
-            // 
-            this.rbtNumIteracoes.AutoSize = true;
-            this.rbtNumIteracoes.Checked = true;
-            this.rbtNumIteracoes.Location = new System.Drawing.Point(41, 18);
-            this.rbtNumIteracoes.Name = "rbtNumIteracoes";
-            this.rbtNumIteracoes.Size = new System.Drawing.Size(87, 17);
-            this.rbtNumIteracoes.TabIndex = 8;
-            this.rbtNumIteracoes.TabStop = true;
-            this.rbtNumIteracoes.Text = "Nº Iterações:";
-            this.rbtNumIteracoes.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Enabled = false;
-            this.radioButton2.Location = new System.Drawing.Point(41, 44);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(80, 17);
-            this.radioButton2.TabIndex = 9;
-            this.radioButton2.Text = "Margem(%):";
-            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // numericUpDown2
             // 
@@ -214,6 +175,46 @@
             this.numericUpDown2.Size = new System.Drawing.Size(98, 20);
             this.numericUpDown2.TabIndex = 10;
             this.numericUpDown2.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Enabled = false;
+            this.radioButton2.Location = new System.Drawing.Point(41, 44);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(80, 17);
+            this.radioButton2.TabIndex = 9;
+            this.radioButton2.Text = "Margem(%):";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // rbtNumIteracoes
+            // 
+            this.rbtNumIteracoes.AutoSize = true;
+            this.rbtNumIteracoes.Checked = true;
+            this.rbtNumIteracoes.Location = new System.Drawing.Point(41, 18);
+            this.rbtNumIteracoes.Name = "rbtNumIteracoes";
+            this.rbtNumIteracoes.Size = new System.Drawing.Size(87, 17);
+            this.rbtNumIteracoes.TabIndex = 8;
+            this.rbtNumIteracoes.TabStop = true;
+            this.rbtNumIteracoes.Text = "Nº Iterações:";
+            this.rbtNumIteracoes.UseVisualStyleBackColor = true;
+            // 
+            // nudNumIteracoes
+            // 
+            this.nudNumIteracoes.Location = new System.Drawing.Point(152, 18);
+            this.nudNumIteracoes.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudNumIteracoes.Name = "nudNumIteracoes";
+            this.nudNumIteracoes.Size = new System.Drawing.Size(98, 20);
+            this.nudNumIteracoes.TabIndex = 7;
+            this.nudNumIteracoes.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -236,8 +237,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudNumIteracoes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudNumIteracoes)).EndInit();
             this.ResumeLayout(false);
 
         }
