@@ -33,10 +33,11 @@ namespace meioTp1_ProgDin
                 dgvFn.Rows[index].Cells[dgvFn_DeltaFn.Index].Value = result.DiffFn[i];
 
                 concorrentes = new List<int>();
-                for(int j = 0;j < result.Fn.Length;j++){
-                    if (result.Vn[j][i] == result.Fn[i]) concorrentes.Add(j+1);
+                for (int j = 0; j < result.Vn.Count; j++)
+                {
+                    if (result.Vn[j][i] == result.Fn[i]) concorrentes.Add(j + 1);
                 }
-                dgvFn.Rows[index].Cells[dgvFn_Concorrentes.Index].Value = string.Join(", ",concorrentes.ToArray());
+                dgvFn.Rows[index].Cells[dgvFn_Concorrentes.Index].Value = string.Join(", ", concorrentes.ToArray());
             }
             dgvFn.AutoSize = true;
         }

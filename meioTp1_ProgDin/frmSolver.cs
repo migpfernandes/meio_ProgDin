@@ -48,16 +48,20 @@ namespace meioTp1_ProgDin
         private void btnCalcular_Click(object sender, EventArgs e)
         {
             List<decimal[,]> projecoes = new List<decimal[,]>();
-            List<decimal[,]> rendimentos = new List<decimal[,]>();
+            List<decimal[,]> contribuicoes = new List<decimal[,]>();
+            Operation op;
             List<IterationResults> res;
             try
             {
                 foreach(uscConcorrente usc in concorrentes){
                     projecoes.Add(usc.getProjectionMatrix());
-                    rendimentos.Add(usc.getWeightMatrix());
+                    contribuicoes.Add(usc.getWeightMatrix());
                 }
 
-                res = modProgDin.Calculate(projecoes, rendimentos, (int)nudDimensao.Value, (int)nudNumIteracoes.Value, Operation.Min);
+                if (rbtMinimizacao.Checked) op = Operation.Min;
+                else op = Operation.Max;
+
+                res = modProgDin.Calculate(projecoes, contribuicoes, (int)nudDimensao.Value, (int)nudNumIteracoes.Value, op);
                 frmResultados frm = new frmResultados(res);
                 frm.ShowDialog();
             }

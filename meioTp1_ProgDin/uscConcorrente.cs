@@ -14,7 +14,7 @@ namespace meioTp1_ProgDin
     {
         private int _dimension;
         private DataGridView projecao;
-        private DataGridView rendimentos;
+        private DataGridView contribuicoes;
 
 
         public uscConcorrente(int dimension)
@@ -28,20 +28,20 @@ namespace meioTp1_ProgDin
         private void buildMatrixes()
         {
             projecao = new DataGridView();
-            rendimentos = new DataGridView();
+            contribuicoes = new DataGridView();
             Label lblProjection = new Label();
             lblProjection.Text = "Matriz de Projeção:";
             lblProjection.AutoSize = true;
             Label lblWeights = new Label();
-            lblWeights.Text = "Matriz de Rendimentos:";
+            lblWeights.Text = "Matriz de Contribuições:";
             lblWeights.AutoSize = true;
 
             fillGrid(projecao);
-            fillGrid(rendimentos);
+            fillGrid(contribuicoes);
             flpConcorrente.Controls.Add(lblProjection);
             flpConcorrente.Controls.Add(projecao);
             flpConcorrente.Controls.Add(lblWeights);
-            flpConcorrente.Controls.Add(rendimentos);
+            flpConcorrente.Controls.Add(contribuicoes);
         }
 
         private void fillGrid(DataGridView dgv)
@@ -68,7 +68,7 @@ namespace meioTp1_ProgDin
 
         public decimal[,] getWeightMatrix()
         {
-            return getMatrixFromDgv(rendimentos);
+            return getMatrixFromDgv(contribuicoes);
         }
 
         private decimal[,] getMatrixFromDgv(DataGridView dgv)

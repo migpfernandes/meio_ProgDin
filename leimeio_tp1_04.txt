@@ -1,0 +1,45 @@
+
+
+
+    ANEXO 1: Dados relativos ao TP1 de MEIO (LEI)
+
+
+    CASO 1:
+ ,                  PMR,   TMR,   PRE,   TRE
+
+    Companhia A,    0.7,    52,   0.55,   2
+
+    Companhia B,    0.95,   312,  0.7,    4
+
+
+
+    CASO 2:
+ ,                  PMR,   TMR,   PRE,   TRE
+
+    Companhia A,    0.8,    52,   0.6,    2
+
+    Companhia B,    0.9,    312,  0.75,   6
+
+
+
+    CASO 3:
+ ,                  PMR,   TMR,   PRE,   TRE
+
+    Companhia A,    0.7,    52,   0.6,    2
+
+    Companhia B,    0.95,   260,  0.75,   6
+
+
+
+    Nº inteiro escolhido (p/ controlo) = 999
+
+    PMR(k)=probabilidade de a fábrica continuar a funcionar no início da semana seguinte,
+           tendo estado a funcionar desde  o início da semana actual,
+           sendo a manutenção de rotina assegurada pela companhia k
+
+    TMR(k)=taxa fixa anual cobrada pela companhia k para manutenção de rotina (U.M./ano)
+
+    PRE(k)=probabilidade de a fábrica voltar a funcionar no início da semana seguinte,
+           tendo estado parada e em reparação pela companhia k desde o início da semana actual
+
+    TRE(k)=taxa cobrada pela companhia k por uma reparação de emergência (U.M.)

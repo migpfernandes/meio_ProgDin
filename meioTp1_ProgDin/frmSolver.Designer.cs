@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSolver));
             this.label1 = new System.Windows.Forms.Label();
             this.nudDimensao = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,12 +42,16 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.rbtNumIteracoes = new System.Windows.Forms.RadioButton();
             this.nudNumIteracoes = new System.Windows.Forms.NumericUpDown();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.rbtMaximizacao = new System.Windows.Forms.RadioButton();
+            this.rbtMinimizacao = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.nudDimensao)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudConcorrentes)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudNumIteracoes)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -56,7 +61,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Dimensao:";
+            this.label1.Text = "Dimensão:";
             // 
             // nudDimensao
             // 
@@ -113,7 +118,7 @@
             this.groupBox1.Size = new System.Drawing.Size(273, 100);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Definiçoes iniciais:";
+            this.groupBox1.Text = "Definições iniciais:";
             // 
             // btnNovo
             // 
@@ -139,7 +144,7 @@
             // btnCalcular
             // 
             this.btnCalcular.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnCalcular.Location = new System.Drawing.Point(302, 452);
+            this.btnCalcular.Location = new System.Drawing.Point(444, 452);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(75, 53);
             this.btnCalcular.TabIndex = 8;
@@ -220,17 +225,53 @@
             0,
             0});
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox3.Controls.Add(this.rbtMaximizacao);
+            this.groupBox3.Controls.Add(this.rbtMinimizacao);
+            this.groupBox3.Location = new System.Drawing.Point(291, 444);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(147, 75);
+            this.groupBox3.TabIndex = 10;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Tipo de objetivo:";
+            // 
+            // rbtMaximizacao
+            // 
+            this.rbtMaximizacao.AutoSize = true;
+            this.rbtMaximizacao.Location = new System.Drawing.Point(41, 44);
+            this.rbtMaximizacao.Name = "rbtMaximizacao";
+            this.rbtMaximizacao.Size = new System.Drawing.Size(86, 17);
+            this.rbtMaximizacao.TabIndex = 9;
+            this.rbtMaximizacao.Text = "Maximização";
+            this.rbtMaximizacao.UseVisualStyleBackColor = true;
+            // 
+            // rbtMinimizacao
+            // 
+            this.rbtMinimizacao.AutoSize = true;
+            this.rbtMinimizacao.Checked = true;
+            this.rbtMinimizacao.Location = new System.Drawing.Point(41, 18);
+            this.rbtMinimizacao.Name = "rbtMinimizacao";
+            this.rbtMinimizacao.Size = new System.Drawing.Size(83, 17);
+            this.rbtMinimizacao.TabIndex = 8;
+            this.rbtMinimizacao.TabStop = true;
+            this.rbtMinimizacao.Text = "Minimização";
+            this.rbtMinimizacao.UseVisualStyleBackColor = true;
+            // 
             // frmSolver
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(810, 531);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnCalcular);
             this.Controls.Add(this.tbcConcorrentes);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmSolver";
-            this.Text = "Programaçao Dinamica";
+            this.Text = "Programação Dinâmica";
             ((System.ComponentModel.ISupportInitialize)(this.nudDimensao)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudConcorrentes)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -239,6 +280,8 @@
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudNumIteracoes)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -258,6 +301,9 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton rbtNumIteracoes;
         private System.Windows.Forms.NumericUpDown nudNumIteracoes;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.RadioButton rbtMaximizacao;
+        private System.Windows.Forms.RadioButton rbtMinimizacao;
     }
 }
 
